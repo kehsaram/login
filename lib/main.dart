@@ -80,6 +80,15 @@ class _AuthPageState extends State<AuthPage> {
                 child: const Text('Second Button'),
               ),
               const SizedBox(height: 8),
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    error = 'Third button pressed!';
+                  });
+                },
+                child: const Text('Third Button'),
+              ),
+              const SizedBox(height: 8),
               Text(
                 'This is a new text widget.',
                 style: const TextStyle(fontSize: 16, color: Colors.blue),
