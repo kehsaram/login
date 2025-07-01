@@ -79,6 +79,11 @@ class _AuthPageState extends State<AuthPage> {
                 },
                 child: const Text('Second Button'),
               ),
+              const SizedBox(height: 8),
+              Text(
+                'This is a new text widget.',
+                style: const TextStyle(fontSize: 16, color: Colors.blue),
+              ),
               if (error.isNotEmpty) ...[
                 const SizedBox(height: 16),
                 Text(error, style: const TextStyle(color: Colors.red)),
