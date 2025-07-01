@@ -70,6 +70,16 @@ class _AuthPageState extends State<AuthPage> {
                 onPressed: signIn,
                 child: const Text('Sign In'),
               ),
+              const SizedBox(height: 8),
+              ElevatedButton(
+                onPressed: () {
+                  // Add your action here, e.g., navigate or register
+                  setState(() {
+                    error = 'Second button pressed!';
+                  });
+                },
+                child: const Text('Second Button'),
+              ),
               if (error.isNotEmpty) ...[
                 const SizedBox(height: 16),
                 Text(error, style: const TextStyle(color: Colors.red)),
