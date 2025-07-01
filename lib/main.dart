@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
+// dded now button
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -69,6 +69,15 @@ class _AuthPageState extends State<AuthPage> {
               ElevatedButton(
                 onPressed: signIn,
                 child: const Text('Sign In'),
+              ),
+              const SizedBox(height: 8),
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    error = 'Second button pressed!';
+                  });
+                },
+                child: const Text('Second Button'),
               ),
               if (error.isNotEmpty) ...[
                 const SizedBox(height: 16),
